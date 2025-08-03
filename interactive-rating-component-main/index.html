@@ -16,11 +16,11 @@
   </head>
   <body>
     <main>
-      <div>
-        <img src="/images/icon-star.svg" alt="star icon" />
-      </div>
+      <form id="rating-form">
+        <div>
+          <img src="/images/icon-star.svg" alt="star icon" />
+        </div>
 
-      <form>
         <h1>How did we do?</h1>
 
         <p>
@@ -49,6 +49,22 @@
 
         <button type="submit">Submit</button>
       </form>
+
+      <div class="thank-you-form" hidden>
+        <img
+          src="/images/illustration-thank-you.svg"
+          alt="rating illustration"
+        />
+
+        <p>You selected <span id="selected-rating">4</span> out of 5</p>
+
+        <h2>Thank You!</h2>
+
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
     </main>
   </body>
 </html>
