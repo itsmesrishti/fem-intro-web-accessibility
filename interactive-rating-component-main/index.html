@@ -12,11 +12,20 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
     <main>
-      <form id="rating-form">
+      <form id="rating-form" class="card">
         <div>
           <img src="/images/icon-star.svg" alt="star icon" />
         </div>
@@ -50,7 +59,7 @@
         <button type="submit">Submit</button>
       </form>
 
-      <div class="thank-you-form" hidden>
+      <div class="thank-you-form" hidden class="card">
         <img
           src="/images/illustration-thank-you.svg"
           alt="rating illustration"

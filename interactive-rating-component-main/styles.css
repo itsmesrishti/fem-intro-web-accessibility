@@ -1,0 +1,28 @@
+:root {
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --dark-gray: hsl(216, 12%, 8%);
+    --medium-gray: hsl(213, 19%, 18%);
+    --light-gray: hsl(217, 12%, 63%);
+    --white: hsl(0, 100%, 100%);
+    --gradient: radial-gradient(var(--dark-gray), var(--medium-gray));
+    --border-radius: 0.93rem;
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card {
+    background-image: var(--gradient);
+    max-width: 25.75rem;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
