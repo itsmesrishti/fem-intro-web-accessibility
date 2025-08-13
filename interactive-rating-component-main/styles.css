@@ -1,28 +1,107 @@
 :root {
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-    --dark-gray: hsl(216, 12%, 8%);
-    --medium-gray: hsl(213, 19%, 18%);
-    --light-gray: hsl(217, 12%, 63%);
-    --white: hsl(0, 100%, 100%);
-    --gradient: radial-gradient(var(--dark-gray), var(--medium-gray));
-    --border-radius: 0.93rem;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --dark-gray: hsl(216, 12%, 8%);
+  --medium-gray: hsl(213, 19%, 18%);
+  --light-gray: hsl(217, 12%, 63%);
+  --white: hsl(0, 100%, 100%);
+  --gradient: radial-gradient(var(--dark-gray), var(--medium-gray));
+  --border-radius: 0.93rem;
 }
 
 body {
-    font-family: "Overpass", sans-serif;
-    background-color: var(--dark-gray);
-    color: var(--light-gray);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+  font-family: "Overpass", sans-serif;
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .card {
-    background-image: var(--gradient);
-    max-width: 25.75rem;
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
+  background-image: var(--gradient);
+  max-width: 25.75rem;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
+
+.star-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: var(--medium-gray);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.star-icon img {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 0.87rem;
+  line-height: 1.37rem;
+}
+
+/* fieldset */
+.sr-only {
+  display: none;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+fieldset input {
+  display: none;
+}
+
+fieldset label {
+  width: 2.62rem;
+  height: 2.62rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--medium-gray);
+  border-radius: 50%;
+}
+
+/* Media Queries */
+@media screen and (min-width: 48rem) {
+  .card {
+    padding: 1.5rem 2rem;
+  }
+
+  .star-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .star-icon img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  h1 {
+    font-size: 2.18rem;
+  }
+
+  p {
+    font-size: 0.93rem;
+    line-height: 1.5rem;
+  }
 }
