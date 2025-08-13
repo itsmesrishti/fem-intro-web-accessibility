@@ -1,18 +1,19 @@
 :root {
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --dark-gray: hsl(216, 12%, 8%);
-  --medium-gray: hsl(213, 19%, 18%);
-  --light-gray: hsl(217, 12%, 63%);
-  --white: hsl(0, 100%, 100%);
-  --gradient: radial-gradient(var(--dark-gray), var(--medium-gray));
+  --bg-color: hsl(216, 12%, 8%);
+  --alt-text-color: hsl(213, 19%, 18%);
+  --main-text-color: hsl(217, 12%, 63%);
+  --main-highlight: hsl(25, 97%, 53%);
+  --alt-highlight: hsl(0, 100%, 100%);
+  --gradient: radial-gradient(var(--bg-color), var(--alt-text-color));
   --border-radius: 0.93rem;
 }
 
 body {
   font-family: "Overpass", sans-serif;
-  background-color: var(--dark-gray);
-  color: var(--light-gray);
+  background-color: var(--bg-color);
+  color: var(--main-text-color);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -32,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.5rem;
-  background-color: var(--medium-gray);
+  background-color: var(--alt-text-color);
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -44,7 +45,7 @@ body {
 }
 
 h1 {
-  color: var(--white);
+  color: var(--alt-highlight);
   font-size: 1.5rem;
 }
 
@@ -63,7 +64,7 @@ fieldset {
   display: flex;
   gap: 1rem;
   padding: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.7rem;
 }
 
 fieldset input {
@@ -76,8 +77,20 @@ fieldset label {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--medium-gray);
+  background-color: var(--alt-text-color);
   border-radius: 50%;
+}
+
+button {
+  background: var(--main-highlight);
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 1.4rem;
+  color: var(--alt-text-color);
+  text-transform: uppercase;
+  font-family: "Overpass", sans-serif;
+  font-weight: var(--font-weight-bold);
 }
 
 /* Media Queries */
