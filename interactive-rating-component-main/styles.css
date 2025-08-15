@@ -9,6 +9,12 @@
   --gradient: radial-gradient(var(--bg-color), var(--alt-text-color));
   --border-radius: 0.93rem;
 }
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Overpass", sans-serif;
@@ -21,11 +27,17 @@ body {
   padding: 1rem;
 }
 
+main {
+  width: 100%;
+  max-width: 25.75rem;
+}
+
 .card {
   background-image: var(--gradient);
-  max-width: 25.75rem;
   border-radius: var(--border-radius);
   padding: 1.5rem;
+  width: 100%;
+  border-radius: 0.93rem;
 }
 
 .star-icon {
@@ -47,6 +59,7 @@ body {
 h1 {
   color: var(--alt-highlight);
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -62,9 +75,11 @@ p {
 fieldset {
   border: none;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
-  margin-bottom: 1.7rem;
+  margin: 1rem 0 1.5rem;
 }
 
 fieldset input {
@@ -79,29 +94,46 @@ fieldset label {
   align-items: center;
   background-color: var(--alt-text-color);
   border-radius: 50%;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+
+fieldset label:hover {
+  background-color: var(--alt-highlight);
+  color: var(--alt-text-color);
 }
 
 button {
   background: var(--main-highlight);
   width: 100%;
   border: none;
-  padding: 1rem;
+  padding: 0.85rem 1rem;
   border-radius: 1.4rem;
   color: var(--alt-text-color);
   text-transform: uppercase;
   font-family: "Overpass", sans-serif;
   font-weight: var(--font-weight-bold);
+  letter-spacing: 1.87px;
+  font-size: 0.87rem;
+  line-height: 1.12rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--alt-highlight);
 }
 
 /* Media Queries */
 @media screen and (min-width: 48rem) {
   .card {
-    padding: 1.5rem 2rem;
+    padding: 2rem 1.5rem;
+    border-radius: 1.87rem;
   }
 
   .star-icon {
     width: 3rem;
     height: 3rem;
+    margin-bottom: 2rem;
   }
 
   .star-icon img {
@@ -116,5 +148,25 @@ button {
   p {
     font-size: 0.93rem;
     line-height: 1.5rem;
+  }
+
+  button {
+    line-height: 1.5rem;
+    padding: 0.66rem 1rem;
+  }
+
+  fieldset {
+    margin-bottom: 2rem;
+  }
+
+  fieldset label {
+    width: 3.18rem;
+    height: 3.18rem;
+  }
+}
+
+@media screen and (max-width: 22.5rem) {
+  fieldset {
+    justify-content: center;
   }
 }
