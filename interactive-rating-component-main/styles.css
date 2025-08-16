@@ -85,6 +85,7 @@ fieldset {
 fieldset input {
   position: absolute;
   opacity: 0;
+  cursor: pointer;
 }
 
 fieldset label {
@@ -112,7 +113,7 @@ fieldset label:has(input:focus) {
   background-color: var(--alt-highlight);
 }
 
-fieldset label:has(input:focus) {
+fieldset label:has(input:focus-visible) {
   outline: var(--alt-highlight) solid 1.5px;
   outline-offset: 2px;
 }
