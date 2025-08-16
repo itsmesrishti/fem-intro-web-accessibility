@@ -6,7 +6,7 @@
   --main-text-color: hsl(217, 12%, 63%);
   --main-highlight: hsl(25, 97%, 53%);
   --alt-highlight: hsl(0, 100%, 100%);
-  --gradient: radial-gradient(#232A34, #181E27);
+  --gradient: radial-gradient(#232a34, #181e27);
   --border-radius: 0.93rem;
 }
 /* reset */
@@ -144,6 +144,17 @@ button:focus {
   background-color: var(--alt-highlight);
 }
 
+/* thanks card */
+.thanks-card {
+  text-align: center;
+}
+
+.thanks-card img {
+  width: 9rem;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
 /* Media Queries */
 @media screen and (min-width: 48rem) {
   .card {
@@ -183,6 +194,11 @@ button:focus {
   fieldset label {
     width: 3.18rem;
     height: 3.18rem;
+  }
+
+  .thanks-card img {
+    width: 10.12rem;
+    margin-bottom: 2rem;
   }
 }
 
