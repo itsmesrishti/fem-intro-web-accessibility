@@ -6,7 +6,7 @@
   --main-text-color: hsl(217, 12%, 63%);
   --main-highlight: hsl(25, 97%, 53%);
   --alt-highlight: hsl(0, 100%, 100%);
-  --gradient: radial-gradient(var(--bg-color), var(--alt-text-color));
+  --gradient: radial-gradient(#232A34, #181E27);
   --border-radius: 0.93rem;
 }
 /* reset */
