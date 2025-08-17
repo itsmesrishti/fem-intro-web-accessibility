@@ -25,7 +25,7 @@
   </head>
   <body>
     <main>
-      <form id="rating-form" class="card" hidden>
+      <form id="rating-form" class="card">
         <div class="star-icon">
           <img src="/images/icon-star.svg" alt="star icon" />
         </div>
@@ -56,10 +56,10 @@
           >
         </fieldset>
 
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit-btn">Submit</button>
       </form>
 
-      <div class="thanks-card card">
+      <div class="thanks-card card" hidden>
         <img
           src="/images/illustration-thank-you.svg"
           alt="rating illustration"
@@ -75,5 +75,7 @@
         </p>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
