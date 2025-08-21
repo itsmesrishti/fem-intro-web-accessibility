@@ -145,12 +145,12 @@ button:focus {
 }
 
 /* thanks card */
-.thanks-card {
+#thanks-card {
   text-align: center;
   padding: 2rem 1.5rem;
 }
 
-.thanks-card img {
+#thanks-card img {
   width: 9rem;
   height: auto;
   margin-bottom: 1.5rem;
@@ -216,11 +216,11 @@ h2 {
     height: 3.18rem;
   }
 
-  .thanks-card {
+  #thanks-card {
     padding: 2.5rem 2rem;
   }
 
-  .thanks-card img {
+  #thanks-card img {
     width: 10.12rem;
     margin-bottom: 2rem;
   }
