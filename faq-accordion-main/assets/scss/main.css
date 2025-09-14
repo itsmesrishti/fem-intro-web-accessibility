@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Work Sans";
+  src: local("Work Sans"), url("/assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype"), url("/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
 body {
   background-color: hsl(275, 100%, 97%);
   background-image: url("../images/background-pattern-mobile.svg");
