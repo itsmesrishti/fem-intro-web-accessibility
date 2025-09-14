@@ -1,0 +1,41 @@
+@import "./base/reset";
+@import "./abstract/variables";
+
+body {
+    background-color: $bg-color;
+    background-image: url("../images/background-pattern-mobile.svg");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media screen and (min-width: 48rem) {
+        background-image: url("../images/background-pattern-desktop.svg");
+    }
+}
+
+main {
+    background-color: $alt-accent-color;
+    border-radius: 1rem;
+    padding: 2rem;
+    
+    @media screen and (min-width: 48rem) {
+        max-width: 40rem;
+    }
+}
+
+footer {
+    @media screen and (min-width: 48rem) {
+        position: absolute;
+        bottom: 1rem;
+    }
+}
+
+.accordion:has([aria-expanded="false"]) .accordion-body{
+  display: none;
+}

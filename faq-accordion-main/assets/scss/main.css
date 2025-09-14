@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(275, 100%, 97%);
+  background-image: url("../images/background-pattern-mobile.svg");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 48rem) {
+  body {
+    background-image: url("../images/background-pattern-desktop.svg");
+  }
+}
+
+main {
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  main {
+    max-width: 40rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  footer {
+    position: absolute;
+    bottom: 1rem;
+  }
+}
+
+.accordion:has([aria-expanded=false]) .accordion-body {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
