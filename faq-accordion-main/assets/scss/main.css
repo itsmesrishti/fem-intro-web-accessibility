@@ -13,6 +13,10 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+h2 {
+  font-size: 1rem;
+}
+
 body {
   background-color: hsl(275, 100%, 97%);
   background-image: url("../images/background-pattern-mobile.svg");
@@ -20,6 +24,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   min-height: 100vh;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,4 +56,23 @@ main {
 
 .accordion:has([aria-expanded=false]) .accordion-body {
   display: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+}
+h1 img {
+  width: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
