@@ -16,6 +16,66 @@ body {
 h2 {
   font-size: 1rem;
 }
+h2:hover {
+  color: rgb(173, 40, 235);
+  cursor: pointer;
+}
+@media screen and (min-width: 48rem) {
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+h1,
+h2 {
+  color: hsl(292, 42%, 14%);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+h1 img {
+  width: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  h1 {
+    font-size: 3rem;
+  }
+  h1 img {
+    width: 2rem;
+  }
+}
+
+.accordion {
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  padding: 1.5rem 0;
+}
+.accordion:has([aria-expanded=false]) .accordion-body {
+  display: none;
+}
+.accordion:last-of-type {
+  border-bottom: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-body {
+  color: hsl(292, 16%, 49%);
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
 
 body {
   background-color: hsl(275, 100%, 97%);
@@ -29,6 +89,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 2rem;
 }
 @media screen and (min-width: 48rem) {
   body {
@@ -47,32 +108,9 @@ main {
   }
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 48rem) and (min-height: 41rem) {
   footer {
     position: absolute;
     bottom: 1rem;
   }
-}
-
-.accordion:has([aria-expanded=false]) .accordion-body {
-  display: none;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-}
-
-.accordion-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-h1 {
-  display: flex;
-  align-items: center;
-}
-h1 img {
-  width: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

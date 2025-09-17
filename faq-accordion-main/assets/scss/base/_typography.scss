@@ -2,14 +2,48 @@
   font-family: "Work Sans";
   src: local("Work Sans"),
     url("/assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype"),
-    url("/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf") format("truetype");
-    font-display: swap;
+    url("/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf")
+      format("truetype");
+  font-display: swap;
 }
 
 body {
-    font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 h2 {
   font-size: 1rem;
+
+  &:hover {
+    color: $main-accent-color;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 48rem) {
+    font-size: 1.3rem;
+  }
+}
+
+h1,
+h2 {
+  color: $base-font-color;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  img {
+    width: 1.5rem;
+  }
+
+  @media screen and (min-width: 48rem) {
+    font-size: 3rem;
+
+    img {
+      width: 2rem;
+    }
+  }
 }

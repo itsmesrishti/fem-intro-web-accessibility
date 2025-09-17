@@ -1,6 +1,7 @@
 @import "./base/reset";
 @import "./abstract/variables";
 @import "./base/typography";
+@import "./components/accordion";
 
 body {
     background-color: $bg-color;
@@ -15,6 +16,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 2rem;
 
     @media screen and (min-width: 48rem) {
         background-image: url("../images/background-pattern-desktop.svg");
@@ -22,7 +24,7 @@ body {
 }
 
 main {
-    background-color: $alt-accent-color;
+    background-color: $alt-accent-color-2;
     border-radius: 1rem;
     padding: 2rem;
     
@@ -32,32 +34,8 @@ main {
 }
 
 footer {
-    @media screen and (min-width: 48rem) {
+    @media screen and (min-width: 48rem) and (min-height: 41rem) {
         position: absolute;
         bottom: 1rem;
-    }
-}
-
-.accordion:has([aria-expanded="false"]) .accordion-body{
-  display: none;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-}
-
-.accordion-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-h1 {
-    display: flex;
-    align-items: center;
-
-    img {
-        width: 1.5rem;
     }
 }
