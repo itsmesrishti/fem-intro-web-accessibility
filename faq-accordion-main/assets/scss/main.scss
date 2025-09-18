@@ -26,14 +26,19 @@ body {
 main {
     background-color: $alt-accent-color-2;
     border-radius: 1rem;
-    padding: 2.5rem 2rem 0.8rem;
+    padding: 1.5rem 1.2rem 0.8rem;
     
     @media screen and (min-width: 48rem) {
         max-width: 38rem;
+        padding: 2.5rem 2.2rem 0.9rem;
     }
 }
 
 footer {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 0.7rem;
+
     @media screen and (min-width: 48rem) and (min-height: 41rem) {
         position: absolute;
         bottom: 1rem;
