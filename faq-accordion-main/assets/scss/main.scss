@@ -39,6 +39,16 @@ footer {
     line-height: 1.5;
     font-size: 0.7rem;
 
+    a {
+        text-decoration: none;
+        color: $base-font-color;
+        font-weight: 600;
+
+        &:visited {
+            color: $base-font-color;
+        }
+    }
+
     @media screen and (min-width: 48rem) and (min-height: 41rem) {
         position: absolute;
         bottom: 1rem;

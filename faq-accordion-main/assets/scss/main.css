@@ -127,6 +127,14 @@ footer {
   line-height: 1.5;
   font-size: 0.7rem;
 }
+footer a {
+  text-decoration: none;
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+}
+footer a:visited {
+  color: hsl(292, 42%, 14%);
+}
 @media screen and (min-width: 48rem) and (min-height: 41rem) {
   footer {
     position: absolute;
