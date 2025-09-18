@@ -2,10 +2,6 @@
   border-bottom: 1px solid $bg-color;
   padding: 1.5rem 0;
 
-  &:has([aria-expanded="false"]) .accordion-body {
-    display: none;
-  }
-
   &:last-of-type {
     border-bottom: none;
   }
@@ -20,10 +16,19 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .accordion-body {
-    color: $alt-accent-color;
-    font-size: 1.1rem;
-    line-height: 1.4;
+  color: $alt-accent-color;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+details img {
+  content: url("/assets/images/icon-plus.svg");
+}
+
+details[open] img {
+  content: url("/assets/images/icon-minus.svg");
 }

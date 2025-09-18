@@ -53,9 +53,6 @@ h1 img {
   border-bottom: 1px solid hsl(275, 100%, 97%);
   padding: 1.5rem 0;
 }
-.accordion:has([aria-expanded=false]) .accordion-body {
-  display: none;
-}
 .accordion:last-of-type {
   border-bottom: none;
 }
@@ -69,12 +66,21 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .accordion-body {
   color: hsl(292, 16%, 49%);
   font-size: 1.1rem;
   line-height: 1.4;
+}
+
+details img {
+  content: url("/assets/images/icon-plus.svg");
+}
+
+details[open] img {
+  content: url("/assets/images/icon-minus.svg");
 }
 
 body {
