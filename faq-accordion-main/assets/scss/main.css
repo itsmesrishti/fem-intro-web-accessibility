@@ -15,6 +15,7 @@ body {
 
 h2 {
   font-size: 1rem;
+  font-weight: 600;
 }
 h2:hover {
   color: rgb(173, 40, 235);
@@ -22,7 +23,7 @@ h2:hover {
 }
 @media screen and (min-width: 48rem) {
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -71,8 +72,14 @@ button {
 
 .accordion-body {
   color: hsl(292, 16%, 49%);
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 1.4;
+  margin-top: 1.2rem;
+}
+@media screen and (min-width: 48rem) {
+  .accordion-body {
+    font-size: 1.05rem;
+  }
 }
 
 details img {
@@ -110,7 +117,7 @@ main {
 }
 @media screen and (min-width: 48rem) {
   main {
-    max-width: 40rem;
+    max-width: 39rem;
   }
 }
 

@@ -21,8 +21,13 @@ button {
 
 .accordion-body {
   color: $alt-accent-color;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 1.4;
+  margin-top: 1.2rem;
+
+  @media screen and (min-width: 48rem) {
+      font-size: 1.05rem;
+    }
 }
 
 details img {
