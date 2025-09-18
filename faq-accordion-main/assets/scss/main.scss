@@ -26,10 +26,10 @@ body {
 main {
     background-color: $alt-accent-color-2;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2.5rem 2rem 0.8rem;
     
     @media screen and (min-width: 48rem) {
-        max-width: 39rem;
+        max-width: 38rem;
     }
 }
 
