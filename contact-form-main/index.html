@@ -1,52 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main>
+      <h1>Contact Us</h1>
+      <form>
+        <label for="fName">First Name *</label>
+        <input type="text" aria-describedby="req-msg" id="fName" />
 
-  Contact Us
+        <label for="lName">Last Name *</label>
+        <input type="text" aria-describedby="req-msg" id="lName" />
 
-  First Name
-  This field is required
+        <label for="email">Email Address *</label>
+        <input
+          type="email"
+          aria-describedby="req-msg email-instructions"
+          id="email"
+        />
+        <p id="email-instructions" hidden>Please enter a valid email address</p>
 
-  Last Name
-  This field is required
+        <fieldset>
+          <legend>Query Type *</legend>
+          <label for="general-enquiry">General Enquiry</label>
+          <input
+            type="radio"
+            name="query-type"
+            value="general-enquiry"
+            aria-describedby="req-msg query-instructions"
+            id="general-enquiry"
+          />
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+          <label for="support-request">Support Request</label>
+          <input
+            type="radio"
+            name="query-type"
+            value="support-request"
+            aria-describedby="req-msg query-instructions"
+            id="support-request"
+          />
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+          <p id="query-instructions" hidden>Please select a query type</p>
+        </fieldset>
 
-  Message
-  This field is required
+        <label for="message">Message</label>
+        <textarea id="message"></textarea>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+        
+        <label for="consent"><input
+          type="checkbox"
+          id="consent"
+          aria-describedby="req-msg consent-instruction"
+        /> I consent to being contacted by the team *</label>
 
-  Submit
+        <p id="consent-instruction" hidden>
+          To submit this form, please consent to being contacted
+        </p>
+        <button type="submit">Submit</button>
+        <span id="req-msg" hidden>This field is required</span>
+      </form>
+    </main>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="toast" hidden>
+      <h2>Message Sent!</h2>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >
+      </p>
+      <p>
+        Coded by
+        <a
+          href="https://www.frontendmentor.io/profile/itsmesrishti"
+          target="_blank"
+          >Srishti Chaudhary</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
