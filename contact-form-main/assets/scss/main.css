@@ -1,0 +1,19 @@
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  letter-spacing: -1px;
+}
+
+body {
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 64rem) and (min-height: 38rem) {
+  footer {
+    position: absolute;
+    bottom: 0.5rem;
+  }
+}/*# sourceMappingURL=main.css.map */
