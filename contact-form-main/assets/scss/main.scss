@@ -1,6 +1,8 @@
 @import "base/reset";
 @import "base/typography";
 @import "abstract/variables";
+@import "components/button";
+@import "components/input";
 
 body {
   min-height: 100vh;

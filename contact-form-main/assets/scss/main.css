@@ -13,6 +13,35 @@ h1 {
   letter-spacing: -1px;
 }
 
+legend {
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.8rem;
+  background-color: #0a7d69;
+}
+
+input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+}
+
+label:has(#consent) {
+  cursor: pointer;
+}
+
+input[type=text], input[type=email], textarea {
+  outline: 1.3px solid #6c757d;
+  box-shadow: none;
+  border: none;
+}
+
+input[type=text]:hover, input[type=email]:hover, textarea:hover {
+  cursor: pointer;
+  outline: 1.34px solid #0a7d69;
+}
+
 body {
   min-height: 100vh;
 }

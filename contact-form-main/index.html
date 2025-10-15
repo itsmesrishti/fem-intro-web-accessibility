@@ -34,24 +34,24 @@
     class="container bg-success-subtle d-flex flex-column align-items-center justify-content-center p-3 py-4"
   >
     <main class="bg-white p-4 rounded-4">
-      <h1 class="h1 fw-bold text-success-emphasis">Contact Us</h1>
+      <h1 class="h1 fw-bold text-success-emphasis mb-4">Contact Us</h1>
       <form>
-        <div class="row">
+        <div class="row row-gap-3">
           <div class="col-12 col-md-6">
-            <label for="fName" class="d-block">First Name <span class="text-success-emphasis">*</span></label>
-            <input type="text" aria-describedby="req-msg" id="fName" class="d-block w-100" />
+            <label for="fName" class="d-block mb-2">First Name <span class="text-success-emphasis">*</span></label>
+            <input type="text" aria-describedby="req-msg" id="fName" class="d-block w-100 p-2 rounded-2" />
           </div>
           <div class="col-12 col-md-6">
-            <label for="lName" class="d-block">Last Name <span class="text-success-emphasis">*</span></label>
-            <input type="text" aria-describedby="req-msg" id="lName" class="d-block w-100" />
+            <label for="lName" class="d-block mb-2">Last Name <span class="text-success-emphasis">*</span></label>
+            <input type="text" aria-describedby="req-msg" id="lName" class="d-block w-100 p-2 rounded-2" />
           </div>
           <div class="col-12">
-            <label for="email" class="d-block">Email Address <span class="text-success-emphasis">*</span></label>
+            <label for="email" class="d-block mb-2">Email Address <span class="text-success-emphasis">*</span></label>
             <input
               type="email"
               aria-describedby="req-msg email-instructions"
               id="email"
-              class="d-block w-100"
+              class="d-block w-100 p-2 rounded-2"
             />
             <p id="email-instructions" hidden>Please enter a valid email address</p>
           </div>
@@ -59,8 +59,7 @@
             <legend>Query Type <span class="text-success-emphasis">*</span></legend>
             <div class="row">
               <div class="col-12 col-md-6">
-                <div class="border p-2 rounded-1">
-                  <label for="general-enquiry">General Enquiry</label>
+                <div class="border p-2 rounded-2 border-secondary">
                   <input
                     type="radio"
                     name="query-type"
@@ -68,11 +67,12 @@
                     aria-describedby="req-msg query-instructions"
                     id="general-enquiry"
                   />
+                  <label for="general-enquiry">General Enquiry</label>
+                  
                 </div>
               </div>
               <div class="col-12 col-md-6">
-                <div class="border p-2 rounded-1">
-                  <label for="support-request">Support Request</label>
+                <div class="border p-2 rounded-2 border-secondary">
                   <input
                     type="radio"
                     name="query-type"
@@ -80,18 +80,20 @@
                     aria-describedby="req-msg query-instructions"
                     id="support-request"
                   />
+                  <label for="support-request">Support Request</label>
+                  
                 </div>
               </div>
             </div>
             <p id="query-instructions" hidden>Please select a query type</p>
           </fieldset>
           <div>
-            <label for="message" class="d-block">Message <span class="text-success-emphasis">*</span></label>
-            <textarea id="message" class="d-block w-100"></textarea>
+            <label for="message" class="d-block mb-2">Message <span class="text-success-emphasis">*</span></label>
+            <textarea id="message" class="d-block w-100 p-2 rounded-2" rows="3"></textarea>
           </div>
         </div>
 
-        <label for="consent"
+        <label for="consent" class="d-flex align-items-center gap-3 mt-4"
           ><input
             type="checkbox"
             id="consent"
@@ -103,7 +105,7 @@
         <p id="consent-instruction" hidden>
           To submit this form, please consent to being contacted
         </p>
-        <button type="submit" class="d-block w-100 bg-success text-white rounded-2 p-2">Submit</button>
+        <button type="submit" class="d-block w-100 text-white rounded-2 border-0 mt-4">Submit</button>
         <span id="req-msg" hidden>This field is required</span>
       </form>
     </main>
