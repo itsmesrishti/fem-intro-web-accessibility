@@ -1,19 +1,26 @@
 input[type="checkbox"] {
-    width: 1rem;
-    height: 1rem;
+  width: 1rem;
+  height: 1rem;
+  accent-color: $main-highlight;
+}
+input[type="radio"] {
+  accent-color: $main-highlight;
+}
+// label:has(#consent) {
+//   cursor: pointer;
+// }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  outline: 1.3px solid #6c757d;
+  box-shadow: none;
+  border: none;
 }
 
-label:has(#consent) {
-    cursor: pointer;
-}
-
-input[type="text"], input[type="email"], textarea {
-    outline: 1.3px solid #6c757d;
-    box-shadow: none;
-    border: none;
-}
-
-input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
-    cursor: pointer;
-    outline: 1.34px solid $main-highlight;
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  cursor: pointer;
+  outline: 1.34px solid $main-highlight;
 }

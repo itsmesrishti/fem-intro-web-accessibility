@@ -57,8 +57,8 @@
           </div>
           <fieldset>
             <legend>Query Type <span class="text-success-emphasis">*</span></legend>
-            <div class="row">
-              <div class="col-12 col-md-6">
+            <div class="row gap-3 gap-sm-0">
+              <div class="col-12 col-md-6 cursor-pointer">
                 <div class="border p-2 rounded-2 border-secondary">
                   <input
                     type="radio"
@@ -66,12 +66,13 @@
                     value="general-enquiry"
                     aria-describedby="req-msg query-instructions"
                     id="general-enquiry"
+                    class="cursor-pointer"
                   />
-                  <label for="general-enquiry">General Enquiry</label>
+                  <label for="general-enquiry" class="cursor-pointer">General Enquiry</label>
                   
                 </div>
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-md-6 cursor-pointer">
                 <div class="border p-2 rounded-2 border-secondary">
                   <input
                     type="radio"
@@ -79,8 +80,9 @@
                     value="support-request"
                     aria-describedby="req-msg query-instructions"
                     id="support-request"
+                    class="cursor-pointer"
                   />
-                  <label for="support-request">Support Request</label>
+                  <label for="support-request" class="cursor-pointer">Support Request</label>
                   
                 </div>
               </div>
@@ -93,14 +95,18 @@
           </div>
         </div>
 
-        <label for="consent" class="d-flex align-items-center gap-3 mt-4"
-          ><input
-            type="checkbox"
-            id="consent"
-            aria-describedby="req-msg consent-instruction"
-          />
-          I consent to being contacted by the team <span class="text-success-emphasis">*</span></label
-        >
+        <div class="d-flex align-items-center gap-3 mt-4 cursor-pointer">
+          <input
+              type="checkbox"
+              id="consent"
+              aria-describedby="req-msg consent-instruction"
+              class="cursor-pointer"
+            />
+          <label for="consent" class="cursor-pointer"
+            >
+            I consent to being contacted by the team <span class="text-success-emphasis">*</span></label
+          >
+        </div>
 
         <p id="consent-instruction" hidden>
           To submit this form, please consent to being contacted
@@ -115,7 +121,7 @@
       <p>Thanks for completing the form. We'll be in touch soon!</p>
     </div>
 
-    <footer class="attribution">
+    <footer class="attribution text-center mt-4">
       <p>
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

@@ -3,6 +3,7 @@
 @import "abstract/variables";
 @import "components/button";
 @import "components/input";
+@import "components/footer";
 
 body {
   min-height: 100vh;
@@ -12,9 +13,6 @@ main {
     max-width: 38rem;
 }
 
-footer {
-  @media screen and (min-width: 64rem) and (min-height: 38rem) {
-    position: absolute;
-    bottom: 0.5rem;
-  }
+.cursor-pointer {
+  cursor: pointer;
 }
