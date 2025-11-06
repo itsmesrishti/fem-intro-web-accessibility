@@ -29,6 +29,8 @@
     />
 
     <link rel="stylesheet" href="/assets/scss/main.css" />
+
+    <script src="/script.js" defer></script>
   </head>
   <body
     class="container bg-success-subtle d-flex flex-column align-items-center justify-content-center p-3 py-4"
@@ -38,28 +40,53 @@
       <form>
         <div class="row row-gap-3">
           <div class="col-12 col-md-6">
-            <label for="fName" class="d-block mb-2">First Name <span class="text-success-emphasis">*</span></label>
-            <input type="text" aria-describedby="req-msg" id="fName" class="d-block w-100 p-2 rounded-2" />
+            <label for="fName" class="d-block mb-2"
+              >First Name <span class="text-success-emphasis">*</span></label
+            >
+            <input
+              type="text"
+              aria-describedby="fName-instructions"
+              id="fName"
+              class="d-block w-100 p-2 rounded-2"
+            />
+            <small class="req-msg text-error" id="fName-instructions" hidden>This field is required</small>
           </div>
           <div class="col-12 col-md-6">
-            <label for="lName" class="d-block mb-2">Last Name <span class="text-success-emphasis">*</span></label>
-            <input type="text" aria-describedby="req-msg" id="lName" class="d-block w-100 p-2 rounded-2" />
+            <label for="lName" class="d-block mb-2"
+              >Last Name <span class="text-success-emphasis">*</span></label
+            >
+            <input
+              type="text"
+              aria-describedby="lName-instructions"
+              id="lName"
+              class="d-block w-100 p-2 rounded-2"
+            />
+            <small class="req-msg text-error" id="lName-instructions" hidden>This field is required</small>
           </div>
           <div class="col-12">
-            <label for="email" class="d-block mb-2">Email Address <span class="text-success-emphasis">*</span></label>
+            <label for="email" class="d-block mb-2"
+              >Email Address <span class="text-success-emphasis">*</span></label
+            >
             <input
               type="email"
               aria-describedby="req-msg email-instructions"
               id="email"
               class="d-block w-100 p-2 rounded-2"
             />
-            <p id="email-instructions" hidden>Please enter a valid email address</p>
+            <small id="email-instructions" class="text-error" hidden>
+              Please enter a valid email address
+            </small>
           </div>
           <fieldset>
-            <legend>Query Type <span class="text-success-emphasis">*</span></legend>
+            <legend>
+              Query Type <span class="text-success-emphasis">*</span>
+            </legend>
             <div class="row gap-3 gap-sm-0">
               <div class="col-12 col-md-6 cursor-pointer">
-                <div class="border p-2 rounded-2 border-secondary">
+                <label
+                  for="general-enquiry"
+                  class="cursor-pointer p-2 rounded-2 w-100 d-flex align-items-center gap-2"
+                >
                   <input
                     type="radio"
                     name="query-type"
@@ -67,13 +94,14 @@
                     aria-describedby="req-msg query-instructions"
                     id="general-enquiry"
                     class="cursor-pointer"
-                  />
-                  <label for="general-enquiry" class="cursor-pointer">General Enquiry</label>
-                  
-                </div>
+                  />General Enquiry</label
+                >
               </div>
               <div class="col-12 col-md-6 cursor-pointer">
-                <div class="border p-2 rounded-2 border-secondary">
+                <label
+                  for="support-request"
+                  class="cursor-pointer p-2 rounded-2 w-100 d-flex align-items-center gap-2"
+                >
                   <input
                     type="radio"
                     name="query-type"
@@ -82,37 +110,47 @@
                     id="support-request"
                     class="cursor-pointer"
                   />
-                  <label for="support-request" class="cursor-pointer">Support Request</label>
-                  
-                </div>
+                  Support Request</label
+                >
               </div>
             </div>
             <p id="query-instructions" hidden>Please select a query type</p>
           </fieldset>
           <div>
-            <label for="message" class="d-block mb-2">Message <span class="text-success-emphasis">*</span></label>
-            <textarea id="message" class="d-block w-100 p-2 rounded-2" rows="3"></textarea>
+            <label for="message" class="d-block mb-2"
+              >Message <span class="text-success-emphasis">*</span></label
+            >
+            <textarea
+              id="message"
+              class="d-block w-100 p-2 rounded-2"
+              rows="3"
+            ></textarea>
           </div>
         </div>
 
         <div class="d-flex align-items-center gap-3 mt-4 cursor-pointer">
           <input
-              type="checkbox"
-              id="consent"
-              aria-describedby="req-msg consent-instruction"
-              class="cursor-pointer"
-            />
-          <label for="consent" class="cursor-pointer"
-            >
-            I consent to being contacted by the team <span class="text-success-emphasis">*</span></label
+            type="checkbox"
+            id="consent"
+            aria-describedby="req-msg consent-instruction"
+            class="cursor-pointer"
+          />
+          <label for="consent" class="cursor-pointer">
+            I consent to being contacted by the team
+            <span class="text-success-emphasis">*</span></label
           >
         </div>
 
         <p id="consent-instruction" hidden>
           To submit this form, please consent to being contacted
         </p>
-        <button type="submit" class="d-block w-100 text-white rounded-2 border-0 mt-4">Submit</button>
-        <span id="req-msg" hidden>This field is required</span>
+        <button
+          type="submit"
+          class="d-block w-100 text-white rounded-2 border-0 mt-4"
+          id="submit-btn"
+        >
+          Submit
+        </button>
       </form>
     </main>
 

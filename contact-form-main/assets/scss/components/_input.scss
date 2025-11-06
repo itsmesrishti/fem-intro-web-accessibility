@@ -6,21 +6,34 @@ input[type="checkbox"] {
 input[type="radio"] {
   accent-color: $main-highlight;
 }
-// label:has(#consent) {
-//   cursor: pointer;
-// }
+
+label:has(input[type="radio"]:checked) {
+  background-color: $highlight-lighter;
+}
 
 input[type="text"],
 input[type="email"],
-textarea {
-  outline: 1.3px solid #6c757d;
+textarea,
+fieldset label {
+  outline: 1.3px solid $default-field-outline;
   box-shadow: none;
   border: none;
 }
 
 input[type="text"]:hover,
 input[type="email"]:hover,
-textarea:hover {
+textarea:hover,
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+label:has(input[type="radio"]:checked),
+label:has(input[type="radio"]:hover) {
   cursor: pointer;
   outline: 1.34px solid $main-highlight;
+}
+
+input[type="text"].error-outline,
+input[type="email"].error-outline {
+  outline-color: red;
+  outline-width: 1.34px;
 }

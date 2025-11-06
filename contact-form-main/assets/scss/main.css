@@ -17,6 +17,10 @@ legend {
   font-size: 1rem;
 }
 
+.text-error {
+  color: red;
+}
+
 button {
   padding: 0.8rem;
   background-color: #0a7d69;
@@ -32,9 +36,14 @@ input[type=radio] {
   accent-color: #0a7d69;
 }
 
+label:has(input[type=radio]:checked) {
+  background-color: hsl(148, 38%, 91%);
+}
+
 input[type=text],
 input[type=email],
-textarea {
+textarea,
+fieldset label {
   outline: 1.3px solid #6c757d;
   box-shadow: none;
   border: none;
@@ -42,9 +51,20 @@ textarea {
 
 input[type=text]:hover,
 input[type=email]:hover,
-textarea:hover {
+textarea:hover,
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus,
+label:has(input[type=radio]:checked),
+label:has(input[type=radio]:hover) {
   cursor: pointer;
   outline: 1.34px solid #0a7d69;
+}
+
+input[type=text].error-outline,
+input[type=email].error-outline {
+  outline-color: red;
+  outline-width: 1.34px;
 }
 
 footer p {
