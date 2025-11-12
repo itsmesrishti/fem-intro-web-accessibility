@@ -69,7 +69,7 @@
             >
             <input
               type="email"
-              aria-describedby="req-msg email-instructions"
+              aria-describedby="email-instructions"
               id="email"
               class="d-block w-100 p-2 rounded-2"
             />
@@ -91,7 +91,7 @@
                     type="radio"
                     name="query-type"
                     value="general-enquiry"
-                    aria-describedby="req-msg query-instructions"
+                    aria-describedby="query-instructions"
                     id="general-enquiry"
                     class="cursor-pointer"
                   />General Enquiry</label
@@ -106,7 +106,7 @@
                     type="radio"
                     name="query-type"
                     value="support-request"
-                    aria-describedby="req-msg query-instructions"
+                    aria-describedby="query-instructions"
                     id="support-request"
                     class="cursor-pointer"
                   />
@@ -114,7 +114,7 @@
                 >
               </div>
             </div>
-            <p id="query-instructions" hidden>Please select a query type</p>
+            <p id="query-instructions" class="text-error" hidden>Please select a query type</p>
           </fieldset>
           <div>
             <label for="message" class="d-block mb-2"
@@ -132,7 +132,7 @@
           <input
             type="checkbox"
             id="consent"
-            aria-describedby="req-msg consent-instruction"
+            aria-describedby="consent-instruction"
             class="cursor-pointer"
           />
           <label for="consent" class="cursor-pointer">
@@ -141,7 +141,7 @@
           >
         </div>
 
-        <p id="consent-instruction" hidden>
+        <p id="consent-instruction" class="text-error" hidden>
           To submit this form, please consent to being contacted
         </p>
         <button
