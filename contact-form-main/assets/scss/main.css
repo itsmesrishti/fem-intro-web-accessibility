@@ -62,7 +62,8 @@ label:has(input[type=radio]:hover) {
 }
 
 input[type=text].error-outline,
-input[type=email].error-outline {
+input[type=email].error-outline,
+textarea.error-outline {
   outline-color: red;
   outline-width: 1.34px;
 }

@@ -114,7 +114,7 @@
                 >
               </div>
             </div>
-            <p id="query-instructions" class="text-error" hidden>Please select a query type</p>
+            <small id="query-instructions" class="text-error" hidden>Please select a query type</small>
           </fieldset>
           <div>
             <label for="message" class="d-block mb-2"
@@ -123,8 +123,10 @@
             <textarea
               id="message"
               class="d-block w-100 p-2 rounded-2"
+              aria-describedby="msg-instructions"
               rows="3"
             ></textarea>
+            <small class="req-msg text-error" id="msg-instructions" hidden>This field is required</small>
           </div>
         </div>
 
@@ -141,9 +143,9 @@
           >
         </div>
 
-        <p id="consent-instruction" class="text-error" hidden>
+        <small id="consent-instruction" class="text-error" hidden>
           To submit this form, please consent to being contacted
-        </p>
+        </small>
         <button
           type="submit"
           class="d-block w-100 text-white rounded-2 border-0 mt-4"
