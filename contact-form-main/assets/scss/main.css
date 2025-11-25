@@ -78,6 +78,34 @@ footer p {
   }
 }
 
+.toast {
+  top: 1rem;
+  background-color: hsl(187, 24%, 22%);
+}
+@media screen and (min-width: 45rem) {
+  .toast {
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+@media screen and (max-width: 22rem) {
+  .toast {
+    max-width: 90%;
+  }
+}
+
+.toast h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.toast p {
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
 body {
   min-height: 100vh;
 }

@@ -1,0 +1,23 @@
+.toast {
+    top: 1rem;
+    background-color: $toast-bg;
+    @media screen and (min-width: 45rem) {
+        width: max-content;
+    }
+
+    @media screen and (max-width: 22rem) {
+        max-width: 90%;
+    }
+}
+
+.toast h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.toast p {
+    font-weight: 400;
+    color: $white;
+    opacity: 0.9;
+    margin-bottom: 0;
+}

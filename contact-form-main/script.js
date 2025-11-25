@@ -2,6 +2,7 @@ const submitBtn = document.getElementById("submit-btn");
 const inputs = document.querySelectorAll("input");
 const errorMsgs = document.querySelectorAll(".text-error");
 const msgInput = document.getElementsByTagName("textarea")[0];
+const toast = document.querySelector(".toast");
 
 let emptyInputs = [];
 let nonEmptyInputs = [];
@@ -59,12 +60,19 @@ function resetArrays() {
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("empty: " + emptyInputs);
-  console.log("non-empty: " + nonEmptyInputs);
   separateInputs(inputs);
-  console.log("empty: " + emptyInputs);
-  console.log("non-empty: " + nonEmptyInputs);
   showError();
+
+  if (nonEmptyInputs.length === 6) {
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 2000);
+    inputs.forEach(input => {
+      input.value = "";
+      input.checked = false;
+    });
+    msgInput.value="";
+  }
+
   removeError();
   resetArrays();
 });
