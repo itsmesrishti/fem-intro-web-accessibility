@@ -3,9 +3,11 @@ const inputs = document.querySelectorAll("input");
 const errorMsgs = document.querySelectorAll(".text-error");
 const msgInput = document.getElementsByTagName("textarea")[0];
 const toast = document.querySelector(".toast");
+const form = document.getElementsByTagName("form")[0];
 
 let emptyInputs = [];
 let nonEmptyInputs = [];
+let formValues = {};
 
 function separateInputs(inputs) {
   inputs.forEach((input) => {
@@ -34,7 +36,7 @@ function separateInputs(inputs) {
 function showError() {
   emptyInputs.forEach((input) => {
     errorMsgs.forEach((errorMsg) => {
-      if ((errorMsg.id == input.getAttribute("aria-describedby"))) {
+      if (errorMsg.id == input.getAttribute("aria-describedby")) {
         errorMsg.hidden = false;
         input.classList.add("error-outline");
       }
@@ -45,7 +47,7 @@ function showError() {
 function removeError() {
   nonEmptyInputs.forEach((input) => {
     errorMsgs.forEach((errorMsg) => {
-      if ((errorMsg.id == input.getAttribute("aria-describedby"))) {
+      if (errorMsg.id == input.getAttribute("aria-describedby")) {
         errorMsg.hidden = true;
         input.classList.remove("error-outline");
       }
@@ -56,6 +58,17 @@ function removeError() {
 function resetArrays() {
   emptyInputs = [];
   nonEmptyInputs = [];
+  formValues = {};
+}
+
+function extractFormValues() {
+  nonEmptyInputs.forEach(input => {
+    if (input.type === "radio") {
+      formValues[input.name] = input.value;
+    } else {
+      formValues[input.id] = input.value;
+    }
+  });
 }
 
 submitBtn.addEventListener("click", (e) => {
@@ -64,13 +77,11 @@ submitBtn.addEventListener("click", (e) => {
   showError();
 
   if (nonEmptyInputs.length === 6) {
+    extractFormValues();
+    console.log(formValues);
     toast.classList.add("show");
     setTimeout(() => toast.classList.remove("show"), 2000);
-    inputs.forEach(input => {
-      input.value = "";
-      input.checked = false;
-    });
-    msgInput.value="";
+    form.reset();
   }
 
   removeError();
